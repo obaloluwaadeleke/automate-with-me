@@ -42,5 +42,5 @@ npx vercel --prod
 `vercel.json` rewrites every route to `index.html`, so `/work/...` URLs keep working on refresh.
 
 ### After the first deploy
-Replace the relative `og:image` / `twitter:image` values in `index.html` with the full URL
-(for example `https://your-project.vercel.app/og-image.jpg`). LinkedIn, X and WhatsApp previews need an absolute URL.
+Share-image URLs in `index.html`, `public/sitemap.xml` and `public/robots.txt` point at
+https://automate-with-me-eta.vercel.app. Update all three if the domain changes, and add new case studies to the sitemap.
