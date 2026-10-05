@@ -3,10 +3,10 @@ import { Link, useLocation } from 'react-router-dom'
 import { mailto, profile } from '../data/site.js'
 
 const links = [
+  { href: '/#about', label: 'About' },
   { href: '/#work', label: 'Work' },
   { href: '/#services', label: 'Services' },
   { href: '/#process', label: 'Process' },
-  { href: '/#about', label: 'About' },
   { href: '/#contact', label: 'Contact' },
 ]
 
