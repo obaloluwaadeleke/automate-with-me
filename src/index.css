@@ -1,0 +1,107 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #0a0b0a;
+  --color-panel: #121412;
+  --color-panel-2: #181a18;
+  --color-line: #262925;
+  --color-fg: #ecebe6;
+  --color-muted: #9a9c95;
+  --color-dim: #6b6e68;
+  --color-signal: #b8f25c;
+  --color-amber: #f2a65a;
+  --color-violet: #a99bf5;
+  --color-sky: #7cc4f5;
+
+  --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-signal);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* faint grid that reads as an ops console, not decoration */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 40%, transparent 100%);
+}
+
+/* Reveal: content is visible by default; JS opts sections into the animation. */
+.js-reveal [data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.js-reveal [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* run-log lines tick in on load */
+@keyframes log-in {
+  from { opacity: 0; transform: translateX(-6px); }
+  to { opacity: 1; transform: none; }
+}
+.log-line {
+  animation: log-in 0.4s ease both;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.pulse-dot {
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
+
+/* a packet travelling along a workflow connector */
+@keyframes packet {
+  from { left: 0; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  to { left: calc(100% - 6px); opacity: 0; }
+}
+.packet {
+  animation: packet 2.4s linear infinite;
+}
+@keyframes packet-y {
+  from { top: 0; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  to { top: calc(100% - 6px); opacity: 0; }
+}
+.packet-y {
+  animation: packet-y 2.4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .log-line, .pulse-dot, .packet, .packet-y { animation: none; }
+  .packet, .packet-y { display: none; }
+  .js-reveal [data-reveal] { opacity: 1; transform: none; transition: none; }
+}
