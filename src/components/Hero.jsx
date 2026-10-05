@@ -28,8 +28,7 @@ export default function Hero() {
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
             I build Make, n8n and AI workflows that take repetitive work off your team. Each one is validated,
-            handles errors and alerts someone when something goes wrong, the way I've run a 1,000-site telecom
-            network operations centre (NOC) since 2022.
+            handles errors and alerts someone when something goes wrong, so nothing gets quietly lost.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a

@@ -17,9 +17,9 @@ export const mailto = (subject = 'Automation project') =>
   `mailto:${profile.email}?subject=${encodeURIComponent(subject)}`
 
 export const stats = [
-  { value: '1,000+', label: 'telecom sites monitored as a NOC engineer' },
   { value: '10 yrs', label: 'turning client requirements into delivered projects' },
   { value: '4', label: 'automation platforms: Make, n8n, Zapier, Power Automate' },
+  { value: '5', label: 'AI model APIs integrated: OpenAI, Claude, OpenRouter, DeepSeek, SiliconFlow' },
 ]
 
 export const services = [
@@ -78,6 +78,6 @@ export const skills = [
   { group: 'AI models', items: ['OpenAI', 'Claude', 'OpenRouter', 'DeepSeek', 'SiliconFlow'] },
   { group: 'APIs & data', items: ['REST APIs', 'Webhooks', 'OAuth2', 'JSON', 'Airtable', 'Google Drive'] },
   { group: 'Reliability', items: ['Error handling', 'Validation', 'Fallback logic', 'Monitoring', 'Documentation'] },
-  { group: 'Platforms', items: ['Google Workspace', 'Microsoft 365', 'WordPress', 'ServiceNow'] },
+  { group: 'Platforms', items: ['Google Workspace', 'Microsoft 365', 'WordPress'] },
   { group: 'Build tools', items: ['Lovable', 'Claude', 'GitHub'] },
 ]
