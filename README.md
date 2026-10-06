@@ -43,4 +43,4 @@ npx vercel --prod
 
 ### After the first deploy
 Share-image URLs in `index.html`, `public/sitemap.xml` and `public/robots.txt` point at
-https://automate-with-me-eta.vercel.app. Update all three if the domain changes, and add new case studies to the sitemap.
+https://obaloluwa-automates.vercel.app. Update all three if the domain changes, and add new case studies to the sitemap.

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://automate-with-me-eta.vercel.app/sitemap.xml
+Sitemap: https://obaloluwa-automates.vercel.app/sitemap.xml
