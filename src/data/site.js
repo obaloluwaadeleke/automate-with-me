@@ -13,7 +13,15 @@ export const profile = {
   photoFallback: '/images/obaloluwa.jpg',
 }
 
-export const mailto = (subject = 'Automation project') =>
+// Optional fields (issuer, year, url) only render when filled in.
+export const certification = {
+  title: 'Certified AI Automation Specialist',
+  issuer: '',
+  year: '',
+  url: '',
+}
+
+export const mailto =(subject = 'Automation project') =>
   `mailto:${profile.email}?subject=${encodeURIComponent(subject)}`
 
 export const stats = [
