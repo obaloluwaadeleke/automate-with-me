@@ -21,7 +21,22 @@ export const certification = {
   url: '',
 }
 
-export const mailto =(subject = 'Automation project') =>
+// Where the contact form posts. FormSubmit forwards submissions to the email in the URL.
+// Swap for a Make / n8n webhook URL to route enquiries through your own workflow.
+export const contactForm = {
+  endpoint: `https://formsubmit.co/ajax/${profile.email}`,
+  topics: [
+    'Lead capture & routing',
+    'Documents & data processing',
+    'Approvals & internal tools',
+    'Connecting apps / APIs',
+    'Fixing an existing automation',
+    'Hiring for a role',
+    'Something else',
+  ],
+}
+
+export const mailto = (subject = 'Automation project') =>
   `mailto:${profile.email}?subject=${encodeURIComponent(subject)}`
 
 export const stats = [
