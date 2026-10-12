@@ -15,12 +15,13 @@ export const profile = {
   photoFallback: '/images/obaloluwa.jpg',
 }
 
-// Optional fields (issuer, year, url) only render when filled in.
+// Optional fields (issuer, year, credentialId, url) only render when filled in.
 export const certification = {
-  title: 'Certified AI Automation Specialist',
-  issuer: '',
-  year: '',
-  url: '',
+  title: 'Diploma in AI Automation',
+  issuer: 'Utiva',
+  year: 'Oct 2026',
+  credentialId: 'QB6GQLT27864Q',
+  url: 'https://study.utiva.co/credential-validation',
 }
 
 // Where the contact form posts. FormSubmit forwards submissions to the email in the URL.

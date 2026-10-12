@@ -8,7 +8,7 @@ const timeline = [
 ]
 
 function CertCard() {
-  const { title, issuer, year, url } = certification
+  const { title, issuer, year, credentialId, url } = certification
   const meta = [issuer, year].filter(Boolean).join(' · ')
   return (
     <div data-reveal className="flex items-start gap-4 rounded-2xl border border-signal/30 bg-signal/[0.06] p-5">
@@ -22,6 +22,11 @@ function CertCard() {
         <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-signal">Certification</p>
         <p className="mt-1 text-lg font-semibold tracking-tight">{title}</p>
         {meta && <p className="mt-0.5 text-sm text-muted">{meta}</p>}
+        {credentialId && (
+          <p className="mt-1 font-mono text-xs text-dim">
+            Credential ID <span className="select-all text-muted">{credentialId}</span>
+          </p>
+        )}
         {url && (
           <a href={url} target="_blank" rel="noreferrer" className="mt-2 inline-block text-sm font-medium text-signal hover:underline">
             Verify credential ↗
@@ -40,7 +45,7 @@ export default function About() {
           <SectionHeader eyebrow="About" title="Ten years of client work. Certified in automation." />
           <div className="space-y-5 text-lg leading-relaxed text-muted" data-reveal>
             <p>
-              I'm Obaloluwa, a Computer Science graduate and certified AI automation specialist based in Lagos. I
+              I'm Obaloluwa, a Computer Science graduate based in Lagos with a Diploma in AI Automation from Utiva. I
               design, build and troubleshoot business workflows with Make, n8n, APIs and AI models, and I document
               them so your team can run them without me.
             </p>
