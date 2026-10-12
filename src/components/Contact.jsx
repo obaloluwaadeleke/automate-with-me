@@ -128,6 +128,26 @@ export default function Contact() {
             Tell me about one manual process, such as invoices, lead follow-ups, approvals or reports. I'll reply with
             how I'd automate it and how it could fail. No obligation.
           </p>
+          {profile.calendly && (
+            <a
+              href={profile.calendly}
+              target="_blank"
+              rel="noreferrer"
+              className="group mt-10 flex items-center gap-4 rounded-2xl border border-signal/30 bg-signal/[0.06] p-5 transition hover:border-signal/60"
+            >
+              <span className="grid size-11 shrink-0 place-items-center rounded-full bg-signal text-ink" aria-hidden>
+                <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="4.5" width="18" height="16" rx="2.5" />
+                  <path d="M3 9.5h18M8 2.5v4M16 2.5v4" />
+                </svg>
+              </span>
+              <span className="flex-1">
+                <span className="block text-lg font-semibold tracking-tight">Prefer to talk? Book a call</span>
+                <span className="block text-sm text-muted">Pick a time that suits you on Calendly.</span>
+              </span>
+              <span className="text-signal transition group-hover:translate-x-1" aria-hidden>↗</span>
+            </a>
+          )}
           <ul className="mt-10 space-y-4 text-sm">
             <li>
               <span className="block font-mono text-xs uppercase tracking-wider text-dim">Email</span>

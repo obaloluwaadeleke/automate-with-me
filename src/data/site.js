@@ -8,6 +8,8 @@ export const profile = {
   email: 'ade.enoch01@gmail.com',
   linkedin: 'https://www.linkedin.com/in/obaloluwa-adeleke-065a721b4',
   github: 'https://github.com/obaloluwaadeleke',
+  // Booking link shown beside the contact form; leave empty to hide it.
+  calendly: 'https://calendly.com/ade-enoch01/30min',
   availability: 'Open to full-time remote / hybrid roles and freelance builds',
   photo: '/images/obaloluwa.webp',
   photoFallback: '/images/obaloluwa.jpg',
